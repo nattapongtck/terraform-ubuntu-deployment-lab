@@ -1,8 +1,6 @@
 .terrafrom/
 
 # Ignore *.pem file
-*.pem
-
 # Local .terraform directories
 **/.terraform/*
 
