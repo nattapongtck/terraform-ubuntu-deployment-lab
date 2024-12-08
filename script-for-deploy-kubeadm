@@ -18,10 +18,12 @@ sysctl net.ipv4.ip_forward
 Install containerd
 sudo apt install containerd
 
+containerd config default > config.toml
 sudo mkdir /etc/containerd
 sudo mv config.toml /etc/containerd
 
 Change containerd to use systemd
+sudo vim /etc/containerd/config.toml
 [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
   ...
   [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
